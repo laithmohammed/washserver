@@ -16,6 +16,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookieParser());
 // app.use(express.cookieParser());
+app.use(express.session({
+  secret: conf.secret,
+  cookie: { domain:'localhost' }
+}));
 
 // Initialize Firebase
 var config = {
