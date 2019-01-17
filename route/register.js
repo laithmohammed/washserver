@@ -60,7 +60,7 @@ router.post('/',(req,res)=>{
         res.cookie('X-auth-token',token);
         // res.setHeader('X-auth-token',token);
         // console.log(token)
-        res.redirect(`${Params.originApp}/startup`)
+        res.redirect(`${Params.originApp}/startup/${token}`)
       }else{
         // res.send(error)
         res.redirect(`${Params.originApp}/register?error`)
