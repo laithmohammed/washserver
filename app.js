@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 // app.use(express.cookieParser());
 app.use(express.session({
-  secret: conf.secret,
+  secret: true,
   cookie: { domain:'localhost' }
 }));
 
