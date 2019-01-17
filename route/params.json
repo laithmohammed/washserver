@@ -1,0 +1,4 @@
+{
+    "originApp"    : "http://localhost:3000",
+    "originServer" : "http://localhost:5678"
+}
