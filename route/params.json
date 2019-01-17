@@ -1,4 +1,5 @@
 {
     "originApp"    : "http://localhost:3000",
-    "originServer" : "https://wash-app-server.herokuapp.com"
+    "originServer" : "https://wash-app-server.herokuapp.com",
+    "DomainApp"    : "localhost"
 }
