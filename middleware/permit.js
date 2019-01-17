@@ -28,7 +28,7 @@ const withPermit = function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   res.setHeader('content-type', 'application/json');
-  let tooken = req.params.token;
+  let tooken = req.params.token || req.cookies['X-auth-token'];
   // console.log(tooken)
   if (!tooken) {
     res.send('{"authorized": "No token provided"}');
