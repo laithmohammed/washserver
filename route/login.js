@@ -48,7 +48,7 @@ router.post('/',(req,res)=>{
                             if(target.permit === 'master'){ permit = 'master'; }
                             const token = jwt.sign({id : target.id,permit : permit}, secret)
                             res.cookie('X-auth-token',token);
-                            res.redirect(`${Params.originApp}/${token}`)
+                            res.redirect(`${Params.originApp}/?${token}`)
                         }else{ // if passwords are not matched, redirect to login page and tell app there are some errors
                             error.push('incorrect information, try again !!');
                             // res.send(error)
