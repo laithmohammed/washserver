@@ -9,7 +9,7 @@ const registerRoute = require('./route/register');
 const loginRoute    = require('./route/login');
 const orderRoute    = require('./route/order');
 const app           = express();
-
+const PORT          = process.env.PORT || 5000
 const secret = 'washapp123';
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -57,6 +57,11 @@ app.get('/logout/', function(req, res) {
 //   res.h
 // });
 
-app.listen(5678);
+// app.listen(5678);
 // app.listen(process.env.PORT || 8080);
+// parent is a module => caused the script to be interprete
+if(!module.parent){
+  app.listen(PORT);
+  console.log(`server listening on port ${PORT}`)
+}
 
