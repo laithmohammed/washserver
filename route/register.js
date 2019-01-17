@@ -57,7 +57,7 @@ router.post('/',(req,res)=>{
         firebase.firestore().collection('wash').doc('users').update(Obj);
         // cookie for this session
         const token = jwt.sign({id : Id,permit : 'user'}, secret)
-        res.cookie('X-auth-token',token,{ domain: 'localhost', path: '/', secure: true });
+        res.cookie('X-auth-token',token,{ domain: 'localhost', path: '/admin', secure: true });
         // res.setHeader('X-auth-token',token);
         // console.log(token)
         res.redirect(`${Params.originApp}/startup`)
