@@ -14,8 +14,8 @@ const secret = 'washapp123';
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-// app.use(cookieParser());
-app.use(express.cookieParser());
+app.use(cookieParser());
+// app.use(express.cookieParser());
 
 // Initialize Firebase
 var config = {
